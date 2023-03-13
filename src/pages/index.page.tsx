@@ -1,7 +1,13 @@
-import type { NextPage } from "next";
+import type { NextPage } from 'next'
+import { HeartRateChart } from '~/components/heart-rate-chart'
+import { StyledHome } from './styled'
 
 const Home: NextPage = () => {
-    return <div></div>
+  return (
+    <StyledHome>
+      <HeartRateChart />
+    </StyledHome>
+  )
 }
 
 export default Home
