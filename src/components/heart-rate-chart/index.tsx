@@ -30,6 +30,7 @@ export const HeartRateChart: FC<Props> = ({}) => {
 
     const pickSmallerBottom = Math.min(calcBottom, calcNextBottom)
 
+    // Dynamic styles are added as inline styles to avoid re-generating ids from styled components for each data point
     return (
       <DataPoint
         key={timestamp + index}
