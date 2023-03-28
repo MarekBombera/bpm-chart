@@ -7,16 +7,7 @@ import {
   SCROLLBAR_HEIGHT,
 } from './constants'
 
-const showDataPoint = (height: number) => keyframes`
-  0% {
-    height: 0;
-    opacity: 0;
-  }
-  100% {
-    height: ${height}rem;
-    opacity: 1;
-  }
-`
+
 
 export const Chart = styled.div`
   display: grid;
@@ -43,14 +34,26 @@ export const DataPoints = styled.ul<DataPointsProps>`
   padding: 0 0.1875rem;
 `
 
-type Props = {
+
+type DataPointProps = {
   height: number
 }
 
-export const DataPoint = styled.li<Props>`
+const showDataPoint = (height: number) => keyframes`
+  0% {
+    height: 0;
+    opacity: 0;
+  }
+  100% {
+    height: ${height}rem;
+    opacity: 1;
+  }
+`
+
+
+export const DataPoint = styled.li<DataPointProps>`
   position: absolute;
   width: ${DATA_POINT_WIDTH}rem;
-  height: ${DATA_POINT_HEIGHT}rem;
   opacity: 0;
   background: red;
   border-radius: 999rem;
