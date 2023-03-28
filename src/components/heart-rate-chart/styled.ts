@@ -4,6 +4,7 @@ import {
   DATA_POINT_HEIGHT,
   DATA_POINT_WIDTH,
   CHART_HEIGHT,
+  SCROLLBAR_WIDTH,
 } from './constants'
 
 const showDataPoint = (height: number) => keyframes`
@@ -20,10 +21,11 @@ const showDataPoint = (height: number) => keyframes`
 export const Chart = styled.div`
   display: grid;
   width: 37.5rem;
-  height: ${CHART_HEIGHT + DATA_POINT_HEIGHT}rem;
+  height: ${CHART_HEIGHT + DATA_POINT_HEIGHT + SCROLLBAR_WIDTH}rem;
   border-left: 0.0625rem solid black;
   border-right: 0.0625rem solid black;
   overflow-x: scroll;
+
 `
 
 type DataPointsProps = {
